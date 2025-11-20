@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AI Chatbot | Home</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-section{
+            height: 100vh;
+            background: linear-gradient(rgba(1, 42, 49, 0.85), rgba(1, 42, 49, 0.85)), url('./Headerimg.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1{
+            color: white;
+            position: absolute;
+            top: 25px;
+            left: 5%;
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        h1:hover{
+            border-bottom: 2px solid #ff9900;
+            color: #ff9900;
+        }
+
+        .navbar{
+            height: 80px;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            width: 100%;
+        }
+
+        .navbar .nav-items{
+            list-style: none;
+        }
+        
+        .navbar .nav-items .navitem{
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .navbar .nav-items a{
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s, border-bottom 0.3s;
+            padding-bottom: 5px;
+        }
+
+        .nav-items a:hover{
+            border-bottom: 2px solid #ff9900;
+            color: #ff9900;
+        }
+
+        .hamburger {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .container{
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            min-height: calc(100vh - 80px);
+            padding-top: 50px; 
+        }
+
+        .container h2{
+            margin-top: 0;
+            font-size: 3.2em;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .container .box1{
+            width: 100%;
+            max-width: 550px;
+        }
+
+        .container .box1 p{
+            font-size: 1.1em;
+            margin-top: 20px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .container .box2{
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            text-align: center;
+        }
+
+        .container .box2 p{
+            font-size: 180px;
+            font-weight: 900;
+            opacity: 0.2;
+            color: #ff9900;
+        }
+        
+        .container form {
+            width: 100%;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .btn1{
+            width: 280px;
+            height: 60px;
+            margin-left: 0;
+            font-size: 1em;
+            background-color: #ff9900;
+            color: #012a31;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .btn2{
+            width: 150px;
+            height: 45px;
+            font-size: 1em;
+            background-color: #012a31;
+            color: white;
+            border-radius: 25px;
+            border: 2px solid white;
+            padding: 8px 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn1:hover{
+            background: white;
+            color: #ff9900;
+            transform: translateY(-2px);
+        }
+
+        .btn2:hover{
+            color: #ff9900;
+            background: white;
+            border-color: #ff9900;
+        }
+
+        .container > center {
+            width: 100%;
+            margin-top: 80px;
+        }
+        .box3, .box4, .box5{
+            color: #333;
+            padding: 30px;
+            margin: 15px auto;
+            float: none;
+            width: 90%;
+            max-width: 320px;
+            display: inline-block;
+            vertical-align: top;
+            border-radius: 12px;
+            background-color: #ffffff;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .box3:hover, .box4:hover, .box5:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .box3 h2, .box4 h2, .box5 h2 {
+            font-size: 1.4em !important;
+            margin-bottom: 10px;
+            color: #012a31;
+        }
+        
+        .box3 p, .box4 p, .box5 p {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .advanced-ai-section{
+            color: #333;
+            background-color: #f4f4f9;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .advanced-ai-section h1{
+            position: static;
+            margin: 0 0 20px 0;
+            color: #012a31;
+            font-size: 2.2em;
+            width: 100%;
+            font-weight: 700;
+        }
+
+        .advanced-ai-section .box6{
+            width: 100%;
+            max-width: 50%;
+            padding: 0;
+            order: 1;
+        }
+
+        .advanced-ai-section .box6 p {
+            font-size: 1em;
+            line-height: 1.7;
+        }
+            
+        .advanced-ai-section .box7{
+            width: 100%;
+            max-width: 45%;
+            text-align: right;
+            order: 2;
+        }
+
+        .advanced-ai-section .box7 img{
+            height: auto;
+            max-height: 350px;
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .advanced-ai-section .btn2 {
+            margin-top: 30px;
+            margin-left: 0;
+            background-color: #ff9900;
+            color: #012a31;
+            border: none;
+            height: 50px;
+            font-weight: 600;
+            width: 180px;
+        }
+
+        .advanced-ai-section .btn2:hover {
+            background-color: #012a31;
+            color: white;
+        }
+
+        .services{
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 50px;
+            color: #012a31;
+            padding: 20px 0;
+        }
+        .services h2 {
+            font-size: 2.5em;
+            color: #ff9900;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .services p {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        main{
+            width: 90%;
+            max-width: 1200px;
+            height: auto;
+            margin: 50px auto 0;
+            color: #333;
+        }
+
+        main .mini1{
+            background-color: #ffffff;
+            height: auto;
+            padding: 30px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        main .box8, main .box9, main .box10 {
+            margin: 20px 15px;
+            padding: 30px;
+            width: 90%;
+            max-width: 320px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            background-color: #f4f4f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s;
+        }
+        
+        main .box8:hover, main .box9:hover, main .box10:hover {
+            background-color: #fff0d9;
+        }
+
+
+        main .box8 h2, main .box9 h2, main .box10 h2 {
+            font-size: 1.4em;
+            color: #012a31;
+            margin-bottom: 10px;
+        }
+
+        main .box8 p, main .box9 p, main .box10 p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        main .creater{
+            background-color: #012a31;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 80px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        main .creater img{
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid #ff9900;
+        }
+
+        main .creater p{
+            width: 100%;
+            max-width: 700px;
+            margin: 10px auto;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        main .creater p:nth-of-type(1) {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #ff9900;
+            margin: 20px auto;
+            font-weight: 500;
+        }
+        
+        main .creater p:nth-of-type(3) {
+            font-size: 1.05em;
+            font-weight: 300;
+            margin-top: 30px;
+        }
+
+        main > .contactform, main > .about {
+            margin-top: 80px;
+            float: none;
+            width: 100%;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        main .contactform{
+            height: auto;
+            border: 3px solid #ff9900;
+            border-radius: 20px;
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        main .contactform h2 {
+            color: #012a31;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+
+        main .contactform label{
+            display: block;
+            margin-top: 15px;
+            margin-left: 0;
+            font-size: 1em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        main .contactform input[type='text'],
+        main .contactform input[type='email']{
+            margin-left: 0;
+            height: 45px;
+            width: 100%;
+            max-width: 400px;
+            font-size: 1em;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 8px;
+            transition: border-color 0.3s;
+        }
+        
+        main .contactform input:focus {
+            border-color: #ff9900;
+            outline: none;
+        }
+
+
+        main .contactform input[type='submit']{
+            margin-left: 0;
+            margin-top: 30px;
+            height: 50px;
+            width: 180px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            background-color: #012a31;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        main .contactform input[type='submit']:hover{
+            background-color: #ff9900;
+            color: #012a31;
+            transform: translateY(-2px);
+        }
+
+        main .about{
+            height: auto;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main .about img{
+            height: auto;
+            max-height: 400px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        main .about .info{
+            font-size: 1.2em;
+            font-weight: bold;
+            border-bottom: 2px solid #ff9900;
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #012a31;
+        }
+
+        footer{
+            height: 100px;
+            width: 100%;
+            color: white;
+            background-color: #012a31;
+            padding: 10px;
+            margin-top: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-top: 5px solid #ff9900;
+        }
+
+        footer p:first-child{
+            font-size: 1.2em;
+        }
+
+        footer .made, footer .in, footer .bh {
+            transition: color 0.3s;
+        }
+
+        footer .made:hover{
+            color: #ff9900;
+        }
+        footer .in:hover{
+            color: white;
+        }
+        footer .bh:hover{
+            color: #4CAF50;
+        }
+
+        footer p:nth-last-child(2) {
+            font-size: 1.5em;
+            margin-top: 15px;
+            color: #ff9900;
+            font-weight: 600;
+        }
+        footer p:last-child {
+            font-size: small;
+            margin-top: 10px;
+            margin-right: 10px;
+            color: #ccc;
+        }
+
+        .footer-credit{
+            position: fixed;
+            z-index: 2147483647;
+            top: auto;
+            right: 12px;
+            bottom: 12px;
+            left: auto;
+            color: #4f4f4f;
+            background-color: #fff;
+            border-radius: 3px;
+            padding: 6px 8px 6px 6px;
+            font-size: 12px;
+            line-height: 14px;
+            text-decoration: none;
+            margin: 0;
+            width: auto;
+            height: auto;
+            overflow: visible;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+        
+        .container:after, .advanced-ai-section:after, main:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /* --- Responsive Design (Media Queries) --- */
+        @media (max-width: 767px) {
+            /* Mobile Devices */
+            .navbar {
+                background-color: rgb(1, 73, 73);
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 100;
+            }
+            h1{
+                position: static;
+                font-size: 1.5em;
+                text-align: left;
+            }
+            .hamburger {
+                display: block;
+            }
+            .navbar .nav-items {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgb(1, 73, 73);
+                flex-direction: column;
+                padding: 10px 0;
+            }
+            .navbar .nav-items.active {
+                display: flex;
+            }
+            .navbar .nav-items .navitem {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+                width: 100%;
+            }
+            .container {
+                padding-top: 80px;
+                min-height: auto; /* मोबाइल पर height को auto करते हैं */
+                text-align: center;
+            }
+            .container .box1 h2{
+                font-size: 2em;
+                line-height: 1.3;
+            }
+            .container .box2 p{
+                font-size: 120px;
+            }
+            .container form {
+                text-align: center;
+            }
+            .btn1 {
+                width: 90%;
+            }
+
+            .box3, .box4, .box5 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .advanced-ai-section {
+                margin: 60px auto 30px;
+                padding: 20px;
+            }
+            .advanced-ai-section .box7{
+                order: 1;
+                margin-bottom: 30px;
+                text-align: center;
+                max-width: 100%;
+            }
+            .advanced-ai-section .box6{
+                order: 2;
+                text-align: center;
+                max-width: 100%;
+            }
+            .advanced-ai-section .box7 img{
+                max-height: 250px;
+            }
+            main .box8, main .box9, main .box10 {
+                width: 100%;
+                margin: 10px 0;
+            }
+            main .creater {
+                margin-top: 50px;
+            }
+            main > .contactform, main > .about {
+                margin-top: 50px;
+            }
+            main .contactform input[type='text'],
+            main .contactform input[type='email']{
+                max-width: 100%;
+            }
+            main .about {
+                margin-bottom: 30px;
+            }
+            footer {
+                height: auto;
+                padding: 20px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                justify-content: space-between;
+                text-align: left;
+            }
+            .container .box1 {
+                width: 55%;
+            }
+            .container .box2 {
+                width: 35%;
+            }
+            .container form {
+                width: 55%;
+                text-align: left;
+            }
+            .advanced-ai-section {
+                padding: 40px;
+            }
+            main > .contactform, main > .about {
+                width: 48%;
+                float: left;
+                margin: 80px 1% 0 1%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container .box1{
+                margin-top: -100px; 
+            }
+            .box3, .box4, .box5 {
+                width: 31%;
+                margin: 15px 1%;
+            }
+            .advanced-ai-section .box6{
+                max-width: 48%;
+            }
+            .advanced-ai-section .box7{
+                max-width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <nav class='navbar'>
+            <ul class="nav-items">
+                <li class="navitem"><a href="./index.html">HOME</a></li>
+                <li class="navitem"><a href="./Aboutus.html">ABOUT</a></li>
+                <li class="navitem"><a href="./Contactus.html">CONTACT</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </nav>
+        <a rel="noreferrer" href="./index.html" class="footer-credit" style="display:block">🚀THAKUR ABHINAV SINGH CHAUHAN</a>
+        <div class="container">
+            <div class="box1">
+                <h2>Get instant answers to your questions with our AI-powered chatbot</h2>
+            </div>
+            <div class="box2">
+                <p>AI</p>
+            </div>
+            
+            <form action="https://chat-app-b2f648.zapier.app/chatbot-by-tasc-group">
+                <button class="btn1">Try our AI Chatbot now</button>
+            </form>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="features-section">
+            <center>
+                <div class="box3">
+                    <h2>Instant Answers</h2>
+                    <p>Our AI chatbot is designed to give you to any question you have. Say goodbye to lengthy searches and get the information you need in seconds.</p>
+                </div>
+                <div class="box4">
+                    <h2>Accurate Responses</h2>
+                    <p>Our AI chatbot uses advanced algorithms and data sources to provide you with accurate and up-to-date information. You can rely on our chatbot to give you the right answers every time.</p>
+                </div>
+                <div class="box5">
+                    <h2>24/7 Availability</h2>
+                    <p>Our AI chatbot is available 24/7, so you can get answers to your questions whenever you need them. Whether it's the middle of the day or late at night, our chatbot is always here to help.</p>
+                </div>
+            </center>
+        </div>
+
+        <div class="advanced-ai-section">
+            <div class="box6">
+                <h1>Advanced AI Technology</h1>
+                <p>Our AI chatbot is powered by state-of-the-art artificial intelligence technology. It uses natural language processing and machine learning algorithms to understand and respond to your questions accurately and efficiently. Advanced AI technology is a broad term that refers to the development and application of artificial intelligence systems that can perform tasks that normally require human intelligence, such as reasoning, learning, decision making, and creativity. </p>
+                <form action="https://chat-app-b2f648.zapier.app/chatbot-by-tasc-group">
+                    <button class="btn2">Try AI now</button>
+                </form>
+            </div>
+            <div class="box7">
+                <img src="https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGFpfGVufDB8fDB8fHww" alt="A robot shown here..">
+            </div>
+        </div>
+
+        <center>
+            <div class="services">
+                <h2>Our Services</h2>
+                <p>We offer a range of services to meet your needs. Whether you're looking for information, assistance, or entertainment, our AI chatbot has got you covered.</p>
+            </div>
+        </center>
+
+        <div class="mini1">
+            <div class="box8">
+                <h2>Information Retrieval</h2>
+                <p>Our AI chatbot can quickly retrieve information from a wide range of reliable sources. Whether you need facts, statistics, or insightful analysis, our chatbot can provide you with the information you're looking for.</p>
+            </div>
+            <div class="box9">
+                <h2>Personalised Recommendation</h2>
+                <p>Our AI chatbot can learn from your preferences and provide personalized recommendations. Whether it's movies, books, or restaurants, our chatbot can suggest options tailored to your tastes.</p>
+            </div>
+            <div class="box10">
+                <h2>Entertainment</h2>
+                <p>Our AI chatbot can entertain you with jokes, trivia, and even interactive games. Whether you're feeling bored or just need a little break, our chatbot is here to keep you entertained.</p>
+            </div>
+        </div>
+
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div class="contactform">
+                <h2>Contact Us:</h2>
+                <form action="backend.php">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="" id="" placeholder="Your email id" required>
+
+                    <label for="no.">Phone Number:</label>
+                    <input type="text" name="no." placeholder="Your phone number" required>
+
+                    <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+            <div class="about">
+                <img src="https://dothazard.com/wp-content/uploads/2017/08/comment-cr%C3%A9er-un-bot.jpg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <center>
+            <br>
+            <p style="font-weight: bold;">AI Chatbot</p>
+            <br>
+            <p><span class="made">MADE</span><span class="in"> IN</span><span class="bh"> BHARAT</span></p>
+        </center>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navItems = document.querySelector('.nav-items');
+
+        hamburger.addEventListener('click', () => {
+            navItems.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AI Chatbot | About Us</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .navbar{
+            height: 80px;
+            background-color: rgb(1, 73, 73);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            position: relative;
+            z-index: 10;
+        }
+        
+        h1{
+            color: white;
+            font-size: 1.8em;
+            transition: color 0.3s;
+        }
+
+        h1:hover{
+            color: aquamarine;
+        }
+        
+        .navbar .nav-items{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .nav-items .navitem{
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .navbar .nav-items a{
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding-bottom: 5px;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        .nav-items a:hover{
+            border-bottom: 2px solid #ff9900;
+            color: #ff9900;
+        }
+        
+        .hamburger {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .container{
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 10px;
+        }
+
+        .container h2{
+            font-size: 2.5em;
+            color: #012a31;
+            border-bottom: 3px solid #ff9900;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .container p{
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .feature{
+            width: 100%;
+            max-width: 450px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature h3{
+            font-size: 1.5em;
+            color: rgb(1, 73, 73);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature ul{
+            list-style: none;
+            padding: 0;
+        }
+        .feature ul li{
+            line-height: 2.5;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1em;
+        }
+        .feature ul li:before {
+            content: "\f00c"; 
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #ff9900;
+            position: absolute;
+            left: 0;
+        }
+
+        .stats-grid {
+            width: 100%;
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .stats-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats-card .num{
+            font-weight: bold;
+            font-size: 2.5em;
+            color: #012a31;
+            margin-bottom: 5px;
+        }
+
+        .stats-card .des{
+            font-size: 0.9em;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .ft{
+            background-color: #012a31;
+            padding: 40px 30px;
+            border-radius: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .ft p{
+            font-size: 1.6em;
+            font-weight: 600;
+            color: white;
+            margin: 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+        
+        .ft form {
+            margin: 0;
+        }
+
+        .ft .btn1{
+            width: 180px;
+            height: 50px; 
+            border: 2px solid white;
+            color: white;
+            background-color: transparent;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+
+        .ft .btn1:hover{
+            color: #012a31;
+            background-color: white;
+            border-color: #ff9900;
+        }
+
+        /* --- Responsive Design --- */
+        @media (min-width: 768px) {
+            .main-content {
+                flex-wrap: nowrap;
+            }
+            .feature {
+                max-width: 40%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .navbar {
+                padding: 0 20px;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+            .hamburger {
+                display: block;
+            }
+            .navbar .nav-items {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgb(1, 73, 73);
+                flex-direction: column;
+                padding: 10px 0;
+            }
+            .navbar .nav-items.active {
+                display: flex;
+            }
+            h1 {
+                position: static;
+            }
+            .container {
+                margin: 30px auto;
+                padding-top: 80px; /* Navbar की height के बराबर padding */
+            }
+            .container h2 {
+                font-size: 2em;
+            }
+            .feature {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .ft {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+            .ft p {
+                font-size: 1.3em;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .ft .btn1 {
+                width: 90%;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+             .stats-grid {
+                grid-template-columns: 1fr; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class='navbar'>
+        <ul class="nav-items" id="nav-items">
+            <li class="navitem"><a href="./index.html">HOME</a></li>
+            <li class="navitem"><a href="./Aboutus.html">ABOUT</a></li>
+            <li class="navitem"><a href="./Contactus.html">CONTACT</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+    <div class="container">
+        <h2>About Us</h2>
+        
+        <div class="main-content">
+            
+            <div class="feature">
+                <h3>Key Features of Our AI Chatbot</h3>
+                <ul>
+                    <li>Instant Answers</li>
+                    <li>Accurate Responses</li>
+                    <li>24/7 Availability</li>
+                    <li>Advanced AI Technology</li>
+                    <li>Information Retrieval</li>
+                    <li>Personalised Recommendation</li>
+                </ul>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <p class="num">2500</p>
+                    <p class="des">Travelled</p>
+                </div>
+                <div class="stats-card">
+                    <p class="num">500</p>
+                    <p class="des">Places</p>
+                </div>
+                <div class="stats-card">
+                    <p class="num">400</p>
+                    <p class="des">Guide</p>
+                </div>
+                <div class="stats-card">
+                    <p class="num">20</p>
+                    <p class="des">Sport</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ft">
+            <p>Ready to join our mission? Reach us today!</p>
+            <form action="./Contactus.html">
+                <button class="btn1">CONTACT NOW</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navItems = document.getElementById('nav-items');
+
+        hamburger.addEventListener('click', () => {
+            navItems.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
