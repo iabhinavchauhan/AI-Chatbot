@@ -11,7 +11,7 @@ https://iabhinavchauhan.github.io/AI-Chatbot/
 
 * 🤖 Integrated Zapier AI Chatbot
 * 💬 Interactive conversational interface
-* 🎨 Clean and modern UI
+* 🎨 Clean and simple UI
 * 📱 Responsive design
 * ⚡ Lightweight and fast
 * 🔗 Seamless Zapier Bot integration
