@@ -45,10 +45,6 @@ AI-Chatbot/
 ├── index.html
 ├── style.css
 ├── README.md
-└── assets/
-    └── ...
-```
-
 ---
 
 ## ⚙️ How It Works
