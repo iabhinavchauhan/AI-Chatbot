@@ -1,4 +1,4 @@
-# 🤖 AI Chatbot
+# AI Chatbot
 
 A simple and interactive **AI Chatbot Web Application** built using **HTML & CSS**, with an integrated **Zapier Chatbot** for handling conversations.
 
