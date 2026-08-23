@@ -82,18 +82,18 @@ Through this project, I practiced:
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 ### Abhinav Chauhan
 
 **Frontend / MERN Stack Developer**
 
-* 💼 LinkedIn: https://www.linkedin.com/in/iabhinavchauhan
+* LinkedIn: https://www.linkedin.com/in/iabhinavchauhan
 * 💻 GitHub: https://github.com/iabhinavchauhan
 
 ---
 
-## ⭐ Show Your Support
+## Show Your Support
 
 If you like this project, consider giving the repository a **⭐ Star**.
 
@@ -101,6 +101,3 @@ Thanks for checking it out! ❤️
 
 ---
 
-## 📄 License
-
-This project is open source and available under the **MIT License**.
