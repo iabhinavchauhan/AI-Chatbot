@@ -28,22 +28,6 @@ https://iabhinavchauhan.github.io/AI-Chatbot/
 
 ---
 
-## 📸 Preview
-
-Add a screenshot of the project here:
-
-```text
-┌─────────────────────────────────────┐
-│           🤖 AI CHATBOT             │
-│                                     │
-│     Your AI-powered assistant       │
-│                                     │
-│        💬 Start a conversation      │
-│                                     │
-└─────────────────────────────────────┘
-```
-
----
 
 ## 🚀 Live Demo
 
