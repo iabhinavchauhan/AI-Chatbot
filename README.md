@@ -68,7 +68,7 @@ User
 
 ---
 
-## 🎯 What I Learned
+## What I Learned
 
 Through this project, I practiced:
 
@@ -89,14 +89,4 @@ Through this project, I practiced:
 
 * LinkedIn: https://www.linkedin.com/in/iabhinavchauhan
 * 💻 GitHub: https://github.com/iabhinavchauhan
-
----
-
-## Show Your Support
-
-If you like this project, consider giving the repository a **⭐ Star**.
-
-Thanks for checking it out! ❤️
-
----
 
