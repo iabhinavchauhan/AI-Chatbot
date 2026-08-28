@@ -37,7 +37,7 @@ Experience the chatbot here:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 AI-Chatbot/
