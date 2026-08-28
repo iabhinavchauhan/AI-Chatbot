@@ -29,7 +29,7 @@ https://iabhinavchauhan.github.io/AI-Chatbot/
 ---
 
 
-## 🚀 Live Demo
+## Live Demo
 
 Experience the chatbot here:
 
