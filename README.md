@@ -7,7 +7,7 @@ https://iabhinavchauhan.github.io/AI-Chatbot/
 
 ---
 
-## ✨ Features
+## Features
 
 * 🤖 Integrated Zapier AI Chatbot
 * 💬 Interactive conversational interface
