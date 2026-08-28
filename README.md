@@ -19,7 +19,7 @@ https://iabhinavchauhan.github.io/AI-Chatbot/
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **HTML5** – Website structure
 * **CSS3** – Styling and responsive design
