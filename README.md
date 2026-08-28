@@ -46,7 +46,7 @@ AI-Chatbot/
 ├── README.md
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 The website interface is created using **HTML and CSS**.
 
