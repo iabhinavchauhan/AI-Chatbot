@@ -32,8 +32,7 @@ https://iabhinavchauhan.github.io/AI-Chatbot/
 ## Live Demo
 
 Experience the chatbot here:
-
-👉 **https://iabhinavchauhan.github.io/AI-Chatbot/**
+ **https://iabhinavchauhan.github.io/AI-Chatbot/**
 
 ---
 
