@@ -67,8 +67,6 @@ User
 
 ## What I Learned
 
-Through this project, I practiced:
-
 * Creating responsive web layouts with HTML & CSS
 * Designing modern chatbot interfaces
 * Integrating third-party chatbot services
