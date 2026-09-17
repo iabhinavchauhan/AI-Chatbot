@@ -67,12 +67,9 @@ User
 
 ## What I Learned
 
-* Creating responsive web layouts with HTML & CSS
 * Designing modern chatbot interfaces
 * Integrating third-party chatbot services
 * Working with Zapier Chatbots
-* Deploying static websites using GitHub Pages
-* Building and presenting a real-world web project
 
 ---
 
