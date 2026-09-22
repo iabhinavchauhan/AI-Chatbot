@@ -13,8 +13,8 @@ https://iabhinavchauhan.github.io/AI-Chatbot/
 * 💬 Interactive conversational interface
 * 🎨 Clean and simple UI
 * 📱 Responsive design
-* 🔗 Seamless Zapier Bot integration
-* 🌐 Hosted with GitHub Pages
+* Seamless Zapier Bot integration
+* Hosted with GitHub Pages
 
 ---
 
